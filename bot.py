@@ -15,10 +15,13 @@ serverContainer = dockerClient.containers.get("sun_asa_server")
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
+        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="/server help"))
 
     async def on_message(self, message):
         channel = client.get_channel(1202967389579255919)
-        if (message.content == "/server start"):
+        if (message.content == "/server help"):
+            await channel.send(f'Folgende Commands stehen zur Verfügung: ```\n/server start\n/server stop\n/server status\n/server backup\n```')
+        elif (message.content == "/server start"):
             await channel.send(f'{message.author.mention} Alles klar, ich geb mein bestes....')
             if (serverContainer.status == "exited"):
                 serverContainer.start()
