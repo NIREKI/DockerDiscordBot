@@ -2,7 +2,7 @@
 
 1. `git clone https://github.com/NIREKI/DockerDiscordBot.git`
 2. Change directory `cd DockerDiscordBot`
-3. Edit `example.env` with your own tokens and id's
+3. Edit `example.env` with your own token, id's, container name and prefix
 4. Rename `example.env to .env` e.g. with `mv example.env .env`
 5. Setup the Linux Service according to the following description:
 
