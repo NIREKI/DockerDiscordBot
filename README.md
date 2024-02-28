@@ -1,3 +1,11 @@
+# Discord bot for controlling an ASA Docker Server
+
+1. `git clone https://github.com/NIREKI/DiscordDockerRemote.git`
+2. Change directory `cd DiscordDockerRemote`
+3. Edit `example.env` with your own tokens and id's
+4. Rename `example.env to .env` e.g. with `mv example.env .env`
+5. Setup the Linux Service according to the following description:
+
 Service file for systemctl: 
 
 Path: /etc/systemd/system/*name*.service

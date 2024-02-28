@@ -5,7 +5,7 @@ import discord
 from dotenv import load_dotenv
 
 load_dotenv()
-# set token in .env file with attribute DISCORD_TOKEN
+# set token in .env file with attribute DISCORD_TOKEN, MESSAGE_CHANNEL and LISTEN_CHANNEL
 TOKEN = os.getenv('DISCORD_TOKEN')
 channel_message = os.getenv('MESSAGE_CHANNEL')
 channel_listen = os.getenv('LISTEN_CHANNEL')
