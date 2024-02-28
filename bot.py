@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()
 # set token in .env file with attribute DISCORD_TOKEN
 TOKEN = os.getenv('DISCORD_TOKEN')
-
+channel_message = os.getenv('MESSAGE_CHANNEL')
+channel_listen = os.getenv('LISTEN_CHANNEL')
 dockerClient = docker.from_env()
 serverContainer = dockerClient.containers.get("sun_asa_server")
 
@@ -19,9 +20,9 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         # the channel the bot answers in
-        channel = client.get_channel(1202967389579255919)
+        channel = client.get_channel(channel_message)
         # the channel the bot listens in
-        if message.channel.id == 1202967389579255919:
+        if message.channel.id == channel_listen:
             if (message.content == "/server help"):
                 await channel.send(f'Folgende Commands stehen zur Verfügung: ```\n/server start\n/server stop\n/server status\n/server backup\n```')
             elif (message.content == "/server start"):
