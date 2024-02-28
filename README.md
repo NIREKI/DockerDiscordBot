@@ -16,7 +16,7 @@ After=multi-user.target
 [Service]
 Type=simple
 Restart=always
-ExecStart=/usr/bin/python3 */etc/ark/arkbot/bot.py*
+ExecStart=/usr/bin/python3 */etc/ark/DockerDiscordBot/bot.py*
 [Install]
 WantedBy=multi-user.target
 ```
