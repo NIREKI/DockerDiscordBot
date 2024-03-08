@@ -4,12 +4,16 @@ Only works with [ARK Ascended Docker image by azixus](https://github.com/azixus/
 
 1. `git clone https://github.com/NIREKI/DockerDiscordBot.git`
 2. Change directory `cd DockerDiscordBot`
-3. Edit `example.env` with your own token, id's, container name and prefix
-4. Rename `example.env to .env` e.g. with `mv example.env .env`
-5. Setup the Linux Service according to the following description:
+3. Install Python3 Dependencies with `pip3 install -r requirements.txt `. Make sure Python3 and Pip3 are installed.
+   1. If that shouldn't work, manually install the dependencies [discord.py](https://pypi.org/project/discord.py/), [docker-py](https://pypi.org/project/docker-py/) and [python-dotenv](https://pypi.org/project/python-dotenv/)
+4. Edit `example.env` with your own token, id's, container name and prefix
+5. Rename `example.env to .env` e.g. with `mv example.env .env`
+6. Setup the Linux Service according to the following description:
 
-Service file for systemctl: 
 
+## Setup Linux Service for systemctl
+
+### Servicefile:
 Path: /etc/systemd/system/*name*.service
 ```
 [Unit]
