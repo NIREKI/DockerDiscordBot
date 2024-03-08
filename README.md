@@ -1,5 +1,7 @@
 # Discord bot for controlling an ASA Docker Server
 
+Only works with [ARK Ascended Docker image by azixus](https://github.com/azixus/ARK_Ascended_Docker)!
+
 1. `git clone https://github.com/NIREKI/DockerDiscordBot.git`
 2. Change directory `cd DockerDiscordBot`
 3. Edit `example.env` with your own token, id's, container name and prefix
